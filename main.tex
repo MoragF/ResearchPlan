@@ -1,0 +1,91 @@
+\documentclass[12pt,twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{float}
+\usepackage[a4paper,width=160mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage{setspace}
+\pagenumbering{roman}
+\usepackage{url}
+\usepackage{gensymb}
+\usepackage{bm}
+\usepackage{subcaption}
+\usepackage{chngcntr}
+\counterwithin{figure}{chapter}
+\raggedbottom
+\usepackage{natbib}
+\usepackage{setspace}
+
+
+\newcommand{\mychapter}[2]{
+    \setcounter{chapter}{#1}
+    \setcounter{section}{0}
+    \chapter*{#2}
+    \addcontentsline{toc}{chapter}{#2}
+}
+
+\usepackage{titlesec}
+\titleformat{\chapter}[display]   
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{18pt}{\Huge}   
+\titlespacing*{\chapter}{0pt}{-20pt}{20pt}
+
+\title{
+{Research Plan}\\
+{\large Department of Earth Sciences }\\
+{\large University of Edinburgh}\\
+{\small Submitted in partial fulfilment of the requirements of Doctorate in Earth Observations at the University of Edinburgh.}\\
+}
+\author{Morag Gray Fotheringham}
+\date{2020}
+
+\begin{document}
+\onehalfspacing
+\maketitle 
+
+\chapter*{Things to Include}
+\begin{itemize}
+\item Literature review
+\item Chapter by chapter plan?
+\item Hypotheses
+\item Research Questions
+\item Predictions
+\item Anticipated results
+\item What those results might mean?
+\item Conceptual figures
+\item References
+\item Gantt Chart of your timeline
+\end{itemize}
+ 
+\chapter*{How to come up with ideas?}
+\begin{itemize}
+\item What are the current views that are being expressed?
+\item Are there any gaps in existing knowledge on the topic that could be addressed?
+\item Has the research you propose been done before?
+\item What interesting areas do they appear to have overlooked?
+\item Are there alternative lines of enquiry beyond those already indicated which seem not to have been
+explored?
+\item What are the areas of dispute in the subject?
+\item Are there inconclusive or contradictory data?
+\item What are the underlying assumptions in which others have viewed the context of their work? Are
+these flawed?
+\end{itemize}
+
+\tableofcontents
+
+\mychapter{1}{Chapter 1}
+\pagenumbering{arabic}
+\input{Chapters/One}
+
+\mychapter{2}{Chapter 2}
+\input{Chapters/Two}
+ 
+\mychapter{3}{Chapter 3}
+\input{Chapters/Three}
+
+
+\bibliographystyle{unsrt}
+\bibliography{Research}
+
+\end{document}
+
+
